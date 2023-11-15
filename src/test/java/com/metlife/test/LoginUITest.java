@@ -27,4 +27,13 @@ public class LoginUITest extends AutomationWrapper {
                 "The most popular open-source Electronic Health Record and Medical Practice Management solution.");
     }
 
+    public void placeholderTest()
+    {
+        String actualUsernamePlaceholder= driver.findElement(By.id("authUser")).getAttribute("placeholder");
+        String actualPasswordPlaceholder= driver.findElement(By.cssSelector("#clearPass")).getAttribute("placeholder");
+
+        Assert.assertEquals(actualUsernamePlaceholder,"Username");
+        Assert.assertEquals(actualPasswordPlaceholder,"Password");
+    }
+
 }
