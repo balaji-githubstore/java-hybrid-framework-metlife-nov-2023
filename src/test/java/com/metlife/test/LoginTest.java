@@ -15,16 +15,20 @@ import java.time.Duration;
 
 public class LoginTest extends AutomationWrapper {
 
+
+    //create a dataProvider with name - validLoginData()
+    //admin,pass,OpenEMR
+    //accountant,accountant,OpenEMR
     @Test
-    public void validLoginTest() {
+    public void validLoginTest(String username,String password,String expectedValue) {
         LoginPage loginPage=new LoginPage(driver);
-        loginPage.enterUsername("admin");
-        loginPage.enterPassword("pass");
+        loginPage.enterUsername(username);
+        loginPage.enterPassword(password);
         loginPage.clickOnLogin();
 
         MainPage mainPage=new MainPage(driver);
         String actualTitle = mainPage.getMainPageTitle();
-        Assert.assertEquals(actualTitle, "OpenEMR");
+        Assert.assertEquals(actualTitle, expectedValue);
     }
 
     @Test
