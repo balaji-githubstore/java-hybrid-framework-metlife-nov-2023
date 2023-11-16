@@ -28,12 +28,12 @@ public class LoginTest extends AutomationWrapper {
     @Test
     public void invalidLoginTest() {
         LoginPage loginPage=new LoginPage(driver);
-        loginPage.enterUsername("admin");
+        loginPage.enterUsername("john");
         loginPage.enterPassword("pass");
         loginPage.clickOnLogin();
 
-        String actualError = driver.findElement(By.xpath("//div[contains(text(),'Invalid')]")).getText();
-        Assert.assertEquals(actualError, "Invalid Username and Password");
+        String actualError = driver.findElement(By.xpath("//p[contains(text(),'Invalid')]")).getText();
+        Assert.assertEquals(actualError, "Invalid username or password");
     }
 
 }
