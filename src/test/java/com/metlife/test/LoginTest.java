@@ -3,23 +3,21 @@ package com.metlife.test;
 import com.metlife.base.AutomationWrapper;
 import com.metlife.pages.LoginPage;
 import com.metlife.pages.MainPage;
+import com.metlife.utils.DataUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
 public class LoginTest extends AutomationWrapper {
 
-
-    //create a dataProvider with name - validLoginData()
-    //admin,pass,OpenEMR
-    //accountant,accountant,OpenEMR
-    @Test
+    @Test(dataProvider = "validLoginData",dataProviderClass = DataUtils.class)
     public void validLoginTest(String username,String password,String expectedValue) {
         LoginPage loginPage=new LoginPage(driver);
         loginPage.enterUsername(username);
