@@ -2,6 +2,7 @@ package com.metlife.test;
 
 import com.metlife.base.AutomationWrapper;
 import com.metlife.pages.LoginPage;
+import com.metlife.pages.MainPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,7 +22,8 @@ public class LoginTest extends AutomationWrapper {
         loginPage.enterPassword("pass");
         loginPage.clickOnLogin();
 
-        String actualTitle = driver.getTitle();
+        MainPage mainPage=new MainPage(driver);
+        String actualTitle = mainPage.getMainPageTitle();
         Assert.assertEquals(actualTitle, "OpenEMR");
     }
 
@@ -32,7 +34,7 @@ public class LoginTest extends AutomationWrapper {
         loginPage.enterPassword("pass");
         loginPage.clickOnLogin();
 
-        String actualError = driver.findElement(By.xpath("//p[contains(text(),'Invalid')]")).getText();
+        String actualError = loginPage.getInvalidErrorMessage();
         Assert.assertEquals(actualError, "Invalid username or password");
     }
 

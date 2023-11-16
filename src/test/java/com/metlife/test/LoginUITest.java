@@ -1,6 +1,7 @@
 package com.metlife.test;
 
 import com.metlife.base.AutomationWrapper;
+import com.metlife.pages.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -29,11 +30,9 @@ public class LoginUITest extends AutomationWrapper {
 
     public void placeholderTest()
     {
-        String actualUsernamePlaceholder= driver.findElement(By.id("authUser")).getAttribute("placeholder");
-        String actualPasswordPlaceholder= driver.findElement(By.cssSelector("#clearPass")).getAttribute("placeholder");
+        LoginPage loginPage=new LoginPage(driver);
 
-        Assert.assertEquals(actualUsernamePlaceholder,"Username");
-        Assert.assertEquals(actualPasswordPlaceholder,"Password");
+        Assert.assertEquals(loginPage.getUsernamePlaceholder(),"Username");
+        Assert.assertEquals(loginPage.getPasswordPlaceholder(),"Password");
     }
-
 }

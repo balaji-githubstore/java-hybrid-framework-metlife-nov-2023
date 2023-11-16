@@ -18,4 +18,9 @@ public class MainPage {
     public void clickOnNewSearchMenu(){
         driver.findElement(By.xpath("")).click();
     }
+
+    public String getMainPageTitle()
+    {
+        return driver.getTitle();
+    }
 }
