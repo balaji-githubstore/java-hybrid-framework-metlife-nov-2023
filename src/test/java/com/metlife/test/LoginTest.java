@@ -16,10 +16,10 @@ public class LoginTest extends AutomationWrapper {
 
     @Test
     public void validLoginTest() {
-
-        LoginPage.enterUsername(driver, "admin");
-        LoginPage.enterPassword(driver, "pass");
-        LoginPage.clickOnLogin(driver);
+        LoginPage loginPage=new LoginPage(driver);
+        loginPage.enterUsername("admin");
+        loginPage.enterPassword("pass");
+        loginPage.clickOnLogin();
 
         String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, "OpenEMR");
@@ -27,9 +27,10 @@ public class LoginTest extends AutomationWrapper {
 
     @Test
     public void invalidLoginTest() {
-        LoginPage.enterUsername(driver, "john");
-        LoginPage.enterPassword(driver, "john123");
-        LoginPage.clickOnLogin(driver);
+        LoginPage loginPage=new LoginPage(driver);
+        loginPage.enterUsername("admin");
+        loginPage.enterPassword("pass");
+        loginPage.clickOnLogin();
 
         String actualError = driver.findElement(By.xpath("//div[contains(text(),'Invalid')]")).getText();
         Assert.assertEquals(actualError, "Invalid Username and Password");
