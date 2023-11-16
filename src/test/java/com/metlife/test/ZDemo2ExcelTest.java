@@ -18,10 +18,17 @@ public class ZDemo2ExcelTest {
 
         XSSFSheet sheet= book.getSheet("validLoginTest");
 
-        String cellValue= sheet.getRow(1).getCell(0).getStringCellValue();
-        System.out.println(cellValue);
-
+        Object[][] data=new Object[2][3];
         //logic to print all cell values
+        for(int r=1;r<3;r++)
+        {
+            for(int c=0;c<3;c++)
+            {
+                String cellValue= sheet.getRow(r).getCell(c).getStringCellValue();
+                System.out.println(cellValue);
+                data[0][0]=cellValue;
+            }
+        }
 
         book.close();
         file.close();
