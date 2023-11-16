@@ -16,7 +16,7 @@ public class AutomationWrapper {
         driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        driver.get("http://demo.openemr.io/b/openemr");
+        driver.get("https://demo.openemr.io/b/openemr");
     }
 
     @AfterMethod
