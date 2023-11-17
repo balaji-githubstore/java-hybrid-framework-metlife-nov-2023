@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [OpenEMR Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="UI Test(failed)">
+<suite thread-count="2" parallel="tests" name="Failed suite [OpenEMR Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="edge"/>
+  <test thread-count="2" parallel="tests" name="Edge UI Test(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
       <class name="com.metlife.test.LoginUITest">
         <methods>
-          <include name="teardown"/>
           <include name="titleTest"/>
-          <include name="setup"/>
         </methods>
       </class> <!-- com.metlife.test.LoginUITest -->
+      <class name="com.metlife.test.LoginTest">
+        <methods>
+          <include name="validLoginTest" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- com.metlife.test.LoginTest -->
     </classes>
-  </test> <!-- UI Test(failed) -->
+  </test> <!-- Edge UI Test(failed) -->
 </suite> <!-- Failed suite [OpenEMR Suite] -->

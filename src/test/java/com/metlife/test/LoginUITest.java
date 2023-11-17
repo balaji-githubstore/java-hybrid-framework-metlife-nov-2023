@@ -13,14 +13,14 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class LoginUITest extends AutomationWrapper {
-    @Test
+    @Test(groups = {"ui","smoke"})
     public void titleTest()
     {
         String actualTitle=driver.getTitle();
         Assert.assertEquals(actualTitle,"OpenEMR Login");
     }
 
-    @Test
+    @Test(groups = {"ui"})
     public void applicationDescriptionTest()
     {
         String actualDesc=driver.findElement(By.xpath("//p[contains(text(),'most')]")).getText();
@@ -28,7 +28,7 @@ public class LoginUITest extends AutomationWrapper {
                 "The most popular open-source Electronic Health Record and Medical Practice Management solution.");
     }
 
-    @Test
+    @Test(groups = {"ui"})
     public void placeholderTest()
     {
         LoginPage loginPage=new LoginPage(driver);

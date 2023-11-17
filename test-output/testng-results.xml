@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-11-17T12:48:17 IST" name="OpenEMR Suite" finished-at="2023-11-17T12:48:26 IST" duration-ms="9040">
+  <suite started-at="2023-11-17T13:13:11 IST" name="OpenEMR Suite" finished-at="2023-11-17T13:13:55 IST" duration-ms="43825">
     <groups>
+      <group name="ui">
+        <method signature="LoginUITest.titleTest()[pri:0, instance:com.metlife.test.LoginUITest@6497b078]" name="titleTest" class="com.metlife.test.LoginUITest"/>
+      </group> <!-- ui -->
+      <group name="smoke">
+        <method signature="LoginTest.validLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" name="validLoginTest" class="com.metlife.test.LoginTest"/>
+        <method signature="LoginUITest.titleTest()[pri:0, instance:com.metlife.test.LoginUITest@6497b078]" name="titleTest" class="com.metlife.test.LoginUITest"/>
+      </group> <!-- smoke -->
+      <group name="login">
+        <method signature="LoginTest.validLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" name="validLoginTest" class="com.metlife.test.LoginTest"/>
+      </group> <!-- login -->
     </groups>
-    <test started-at="2023-11-17T12:48:17 IST" name="UI Test" finished-at="2023-11-17T12:48:26 IST" duration-ms="9040">
-      <class name="com.metlife.test.LoginUITest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.metlife.test.LoginUITest@671a5887]" started-at="2023-11-17T12:48:17 IST" name="setup" finished-at="2023-11-17T12:48:26 IST" duration-ms="8515" status="PASS">
+    <test started-at="2023-11-17T13:13:11 IST" name="Edge UI Test" finished-at="2023-11-17T13:13:55 IST" duration-ms="43825">
+      <class name="com.metlife.test.LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:24 IST" name="setup" finished-at="2023-11-17T13:13:33 IST" duration-ms="9243" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +28,89 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="titleTest()[pri:0, instance:com.metlife.test.LoginUITest@671a5887]" started-at="2023-11-17T12:48:26 IST" name="titleTest" finished-at="2023-11-17T12:48:26 IST" duration-ms="30" status="PASS">
+        <test-method signature="validLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:33 IST" name="validLoginTest" data-provider="commonDataProvider" finished-at="2023-11-17T13:13:39 IST" duration-ms="5986" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[receptionist]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[receptionist]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[OpenEMR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:39 IST" name="teardown" finished-at="2023-11-17T13:13:40 IST" duration-ms="354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:40 IST" name="setup" finished-at="2023-11-17T13:13:49 IST" duration-ms="9332" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:49 IST" name="validLoginTest" data-provider="commonDataProvider" finished-at="2023-11-17T13:13:55 IST" duration-ms="5664" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[physician]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[physician]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[OpenEMR]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:55 IST" name="teardown" finished-at="2023-11-17T13:13:55 IST" duration-ms="278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.metlife.test.LoginTest -->
+      <class name="com.metlife.test.LoginUITest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.metlife.test.LoginUITest@6497b078]" started-at="2023-11-17T13:13:11 IST" name="setup" finished-at="2023-11-17T13:13:22 IST" duration-ms="10929" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="titleTest()[pri:0, instance:com.metlife.test.LoginUITest@6497b078]" started-at="2023-11-17T13:13:22 IST" name="titleTest" finished-at="2023-11-17T13:13:22 IST" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- titleTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.metlife.test.LoginUITest@671a5887]" started-at="2023-11-17T12:48:26 IST" name="teardown" finished-at="2023-11-17T12:48:26 IST" duration-ms="386" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.metlife.test.LoginUITest@6497b078]" started-at="2023-11-17T13:13:22 IST" name="teardown" finished-at="2023-11-17T13:13:23 IST" duration-ms="372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.metlife.test.LoginUITest -->
-    </test> <!-- UI Test -->
+    </test> <!-- Edge UI Test -->
   </suite> <!-- OpenEMR Suite -->
 </testng-results>

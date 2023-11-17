@@ -9,12 +9,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+
 import java.time.Duration;
 
 public class AutomationWrapper {
     protected WebDriver driver;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     @Parameters({"browser"})
     public void setup(@Optional("ch") String browserName) {
         if (browserName.equalsIgnoreCase("edge")) {
@@ -30,7 +31,7 @@ public class AutomationWrapper {
         driver.get("https://demo.openemr.io/b/openemr");
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void teardown() {
         driver.quit();
     }
