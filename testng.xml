@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OpenEMR Suite">
+    <parameter name="browser" value="edge"></parameter>
+    <test verbose="2" preserve-order="true" name="UI Test">
+        <classes>
+            <class name="com.metlife.test.LoginUITest">
+                <methods>
+                    <include name="titleTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

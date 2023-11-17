@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OpenEMR Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="UI Test(failed)">
+    <classes>
+      <class name="com.metlife.test.LoginUITest">
+        <methods>
+          <include name="teardown"/>
+          <include name="titleTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.metlife.test.LoginUITest -->
+    </classes>
+  </test> <!-- UI Test(failed) -->
+</suite> <!-- Failed suite [OpenEMR Suite] -->

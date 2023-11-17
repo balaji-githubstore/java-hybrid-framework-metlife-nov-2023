@@ -28,6 +28,7 @@ public class LoginUITest extends AutomationWrapper {
                 "The most popular open-source Electronic Health Record and Medical Practice Management solution.");
     }
 
+    @Test
     public void placeholderTest()
     {
         LoginPage loginPage=new LoginPage(driver);
