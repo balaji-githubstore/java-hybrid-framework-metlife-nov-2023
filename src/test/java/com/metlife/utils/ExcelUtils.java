@@ -1,4 +1,4 @@
-package com.metlife.test;
+package com.metlife.utils;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -8,14 +8,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-//    will be deleted
-public class ZDemo2ExcelTest {
-
-    public static void main(String[] args) throws IOException {
-
-        FileInputStream file = new FileInputStream("test-data/OpenEmrdata.xlsx");
+public class ExcelUtils {
+    public static Object[][] getSheetIntoTwoDimArray(String filePath, String sheetname) throws IOException {
+        FileInputStream file = new FileInputStream(filePath);
         XSSFWorkbook book = new XSSFWorkbook(file);
-        XSSFSheet sheet = book.getSheet("invalidLoginTest");
+        XSSFSheet sheet = book.getSheet(sheetname);
         int rowCount = sheet.getPhysicalNumberOfRows();
         int cellCount = sheet.getRow(0).getPhysicalNumberOfCells();
 
@@ -28,9 +25,8 @@ public class ZDemo2ExcelTest {
                 data[r - 1][c] = format.formatCellValue(sheet.getRow(r).getCell(c));
             }
         }
-
         book.close();
         file.close();
-
+        return data;
     }
 }

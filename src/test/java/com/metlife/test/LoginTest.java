@@ -17,7 +17,7 @@ import java.time.Duration;
 
 public class LoginTest extends AutomationWrapper {
 
-    @Test(dataProvider = "validLoginData",dataProviderClass = DataUtils.class)
+    @Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class)
     public void validLoginTest(String username,String password,String expectedValue) {
         LoginPage loginPage=new LoginPage(driver);
         loginPage.enterUsername(username);
@@ -29,15 +29,15 @@ public class LoginTest extends AutomationWrapper {
         Assert.assertEquals(actualTitle, expectedValue);
     }
 
-    @Test
-    public void invalidLoginTest() {
+    @Test(dataProvider = "commonDataProvider",dataProviderClass = DataUtils.class)
+    public void invalidLoginTest(String username,String password,String expectedError) {
         LoginPage loginPage=new LoginPage(driver);
-        loginPage.enterUsername("john");
-        loginPage.enterPassword("pass");
+        loginPage.enterUsername(username);
+        loginPage.enterPassword(password);
         loginPage.clickOnLogin();
 
         String actualError = loginPage.getInvalidErrorMessage();
-        Assert.assertEquals(actualError, "Invalid username or password");
+        Assert.assertEquals(actualError, expectedError);
     }
 
 }
