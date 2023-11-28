@@ -23,7 +23,7 @@ import java.lang.reflect.Method;
 //@SpringBootTest(classes = {TestConfig.class})
 @SpringBootTest(classes = {WebDriverLibrary.class, LoginPage.class, MainPage.class})
 @Configuration
-@ComponentScan({"com.metlife"})
+//@ComponentScan({"com.metlife.base","com.metlife.pages"})
 public class AutomationWrapper extends AbstractTestNGSpringContextTests {
     @Autowired
     protected WebDriver driver;

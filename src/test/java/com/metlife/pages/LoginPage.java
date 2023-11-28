@@ -2,7 +2,9 @@ package com.metlife.pages;
 
 import com.metlife.base.WebDriverKeywords;
 import org.openqa.selenium.By;
+import org.springframework.stereotype.Component;
 
+@Component
 public class LoginPage extends WebDriverKeywords {
     private By usernameLocator=By.id("authUser");
     private By passwordLocator=By.cssSelector("#clearPass");
