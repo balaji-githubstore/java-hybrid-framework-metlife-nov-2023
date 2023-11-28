@@ -1,6 +1,6 @@
-package com.metlife.springboot.pages;
+package com.metlife.pages;
 
-import com.metlife.springboot.base.WebDriverKeywords;
+import com.metlife.base.WebDriverKeywords;
 import org.openqa.selenium.By;
 
 public class LoginPage extends WebDriverKeywords {

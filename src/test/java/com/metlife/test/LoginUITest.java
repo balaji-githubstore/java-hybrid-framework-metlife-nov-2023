@@ -1,7 +1,7 @@
-package com.metlife.springboot.test;
+package com.metlife.test;
 
-import com.metlife.springboot.base.AutomationWrapper;
-import com.metlife.springboot.pages.LoginPage;
+import com.metlife.base.AutomationWrapper;
+import com.metlife.pages.LoginPage;
 import org.openqa.selenium.By;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;

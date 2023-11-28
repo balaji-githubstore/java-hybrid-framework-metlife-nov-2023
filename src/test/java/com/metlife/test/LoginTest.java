@@ -1,14 +1,11 @@
-package com.metlife.springboot.test;
+package com.metlife.test;
 
 import com.aventstack.extentreports.Status;
-import com.metlife.springboot.base.AutomationWrapper;
-import com.metlife.springboot.pages.LoginPage;
-import com.metlife.springboot.pages.MainPage;
-import com.metlife.springboot.utils.DataUtils;
+import com.metlife.base.AutomationWrapper;
+import com.metlife.pages.LoginPage;
+import com.metlife.pages.MainPage;
+import com.metlife.utils.DataUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 public class LoginTest extends AutomationWrapper {

@@ -1,4 +1,4 @@
-package com.metlife.springboot.base;
+package com.metlife.base;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -6,8 +6,8 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.metlife.springboot.pages.LoginPage;
-import com.metlife.springboot.pages.MainPage;
+import com.metlife.pages.LoginPage;
+import com.metlife.pages.MainPage;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,7 +23,7 @@ import java.lang.reflect.Method;
 //@SpringBootTest(classes = {TestConfig.class})
 @SpringBootTest(classes = {WebDriverLibrary.class, LoginPage.class, MainPage.class})
 @Configuration
-@ComponentScan({"com.metlife.springboot"})
+@ComponentScan({"com.metlife"})
 public class AutomationWrapper extends AbstractTestNGSpringContextTests {
     @Autowired
     protected WebDriver driver;

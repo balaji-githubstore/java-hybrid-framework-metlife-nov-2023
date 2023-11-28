@@ -1,7 +1,7 @@
-package com.metlife.springboot.base;
+package com.metlife.base;
 
-import com.metlife.springboot.pages.LoginPage;
-import com.metlife.springboot.pages.MainPage;
+import com.metlife.pages.LoginPage;
+import com.metlife.pages.MainPage;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
