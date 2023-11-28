@@ -1,4 +1,4 @@
-package com.metlife.test;
+package com.metlife.springboot.test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;

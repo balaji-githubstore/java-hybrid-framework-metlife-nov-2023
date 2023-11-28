@@ -4,9 +4,9 @@
     <parameter name="browser" value="edge"></parameter>
     <test verbose="2" preserve-order="true" name="Edge UI Test">
         <classes>
-            <class name="com.metlife.test.LoginUITest">
+            <class name="test.com.metlife.springboot.LoginUITest">
             </class>
-            <class name="com.metlife.test.LoginTest">
+            <class name="test.com.metlife.springboot.LoginTest">
             </class>
         </classes>
     </test>

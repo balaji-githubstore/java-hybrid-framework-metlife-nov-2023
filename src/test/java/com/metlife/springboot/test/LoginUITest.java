@@ -1,18 +1,17 @@
-package com.metlife.test;
+package com.metlife.springboot.test;
 
-import com.metlife.base.AutomationWrapper;
-import com.metlife.pages.LoginPage;
+import com.metlife.springboot.base.AutomationWrapper;
+import com.metlife.springboot.pages.LoginPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
 
 public class LoginUITest extends AutomationWrapper {
+
+    @Autowired
+    private LoginPage loginPage;
     @Test(groups = {"ui","smoke"})
     public void titleTest()
     {
@@ -31,7 +30,7 @@ public class LoginUITest extends AutomationWrapper {
     @Test(groups = {"ui"})
     public void placeholderTest()
     {
-        LoginPage loginPage=new LoginPage(driver);
+//        LoginPage loginPage=new LoginPage(driver);
 
         Assert.assertEquals(loginPage.getUsernamePlaceholder(),"Username");
         Assert.assertEquals(loginPage.getPasswordPlaceholder(),"Password");

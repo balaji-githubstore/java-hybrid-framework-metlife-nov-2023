@@ -5,19 +5,19 @@
   <suite started-at="2023-11-17T13:13:11 IST" name="OpenEMR Suite" finished-at="2023-11-17T13:13:55 IST" duration-ms="43825">
     <groups>
       <group name="ui">
-        <method signature="LoginUITest.titleTest()[pri:0, instance:com.metlife.test.LoginUITest@6497b078]" name="titleTest" class="com.metlife.test.LoginUITest"/>
+        <method signature="LoginUITest.titleTest()[pri:0, instance:test.com.metlife.springboot.LoginUITest@6497b078]" name="titleTest" class="test.com.metlife.springboot.LoginUITest"/>
       </group> <!-- ui -->
       <group name="smoke">
-        <method signature="LoginTest.validLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" name="validLoginTest" class="com.metlife.test.LoginTest"/>
-        <method signature="LoginUITest.titleTest()[pri:0, instance:com.metlife.test.LoginUITest@6497b078]" name="titleTest" class="com.metlife.test.LoginUITest"/>
+        <method signature="LoginTest.validLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.com.metlife.springboot.LoginTest@1f97cf0d]" name="validLoginTest" class="test.com.metlife.springboot.LoginTest"/>
+        <method signature="LoginUITest.titleTest()[pri:0, instance:test.com.metlife.springboot.LoginUITest@6497b078]" name="titleTest" class="test.com.metlife.springboot.LoginUITest"/>
       </group> <!-- smoke -->
       <group name="login">
-        <method signature="LoginTest.validLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" name="validLoginTest" class="com.metlife.test.LoginTest"/>
+        <method signature="LoginTest.validLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.com.metlife.springboot.LoginTest@1f97cf0d]" name="validLoginTest" class="test.com.metlife.springboot.LoginTest"/>
       </group> <!-- login -->
     </groups>
     <test started-at="2023-11-17T13:13:11 IST" name="Edge UI Test" finished-at="2023-11-17T13:13:55 IST" duration-ms="43825">
-      <class name="com.metlife.test.LoginTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:24 IST" name="setup" finished-at="2023-11-17T13:13:33 IST" duration-ms="9243" status="PASS">
+      <class name="test.com.metlife.springboot.LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.com.metlife.springboot.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:24 IST" name="setup" finished-at="2023-11-17T13:13:33 IST" duration-ms="9243" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,7 +28,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:33 IST" name="validLoginTest" data-provider="commonDataProvider" finished-at="2023-11-17T13:13:39 IST" duration-ms="5986" status="PASS">
+        <test-method signature="validLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.com.metlife.springboot.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:33 IST" name="validLoginTest" data-provider="commonDataProvider" finished-at="2023-11-17T13:13:39 IST" duration-ms="5986" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -49,11 +49,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:39 IST" name="teardown" finished-at="2023-11-17T13:13:40 IST" duration-ms="354" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.com.metlife.springboot.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:39 IST" name="teardown" finished-at="2023-11-17T13:13:40 IST" duration-ms="354" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:40 IST" name="setup" finished-at="2023-11-17T13:13:49 IST" duration-ms="9332" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.com.metlife.springboot.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:40 IST" name="setup" finished-at="2023-11-17T13:13:49 IST" duration-ms="9332" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -64,7 +64,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:49 IST" name="validLoginTest" data-provider="commonDataProvider" finished-at="2023-11-17T13:13:55 IST" duration-ms="5664" status="PASS">
+        <test-method signature="validLoginTest(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.com.metlife.springboot.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:49 IST" name="validLoginTest" data-provider="commonDataProvider" finished-at="2023-11-17T13:13:55 IST" duration-ms="5664" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -85,13 +85,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.metlife.test.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:55 IST" name="teardown" finished-at="2023-11-17T13:13:55 IST" duration-ms="278" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.com.metlife.springboot.LoginTest@1f97cf0d]" started-at="2023-11-17T13:13:55 IST" name="teardown" finished-at="2023-11-17T13:13:55 IST" duration-ms="278" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.metlife.test.LoginTest -->
-      <class name="com.metlife.test.LoginUITest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.metlife.test.LoginUITest@6497b078]" started-at="2023-11-17T13:13:11 IST" name="setup" finished-at="2023-11-17T13:13:22 IST" duration-ms="10929" status="PASS">
+      </class> <!-- test.com.metlife.springboot.LoginTest -->
+      <class name="test.com.metlife.springboot.LoginUITest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:test.com.metlife.springboot.LoginUITest@6497b078]" started-at="2023-11-17T13:13:11 IST" name="setup" finished-at="2023-11-17T13:13:22 IST" duration-ms="10929" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -102,15 +102,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="titleTest()[pri:0, instance:com.metlife.test.LoginUITest@6497b078]" started-at="2023-11-17T13:13:22 IST" name="titleTest" finished-at="2023-11-17T13:13:22 IST" duration-ms="32" status="PASS">
+        <test-method signature="titleTest()[pri:0, instance:test.com.metlife.springboot.LoginUITest@6497b078]" started-at="2023-11-17T13:13:22 IST" name="titleTest" finished-at="2023-11-17T13:13:22 IST" duration-ms="32" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- titleTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.metlife.test.LoginUITest@6497b078]" started-at="2023-11-17T13:13:22 IST" name="teardown" finished-at="2023-11-17T13:13:23 IST" duration-ms="372" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.com.metlife.springboot.LoginUITest@6497b078]" started-at="2023-11-17T13:13:22 IST" name="teardown" finished-at="2023-11-17T13:13:23 IST" duration-ms="372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.metlife.test.LoginUITest -->
+      </class> <!-- test.com.metlife.springboot.LoginUITest -->
     </test> <!-- Edge UI Test -->
   </suite> <!-- OpenEMR Suite -->
 </testng-results>

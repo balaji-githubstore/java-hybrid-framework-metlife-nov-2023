@@ -1,4 +1,4 @@
-package com.metlife.test;
+package com.metlife.springboot.test;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

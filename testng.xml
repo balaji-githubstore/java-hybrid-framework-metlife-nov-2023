@@ -4,7 +4,7 @@
     <parameter name="browser" value="edge"></parameter>
     <test verbose="2" preserve-order="true" name="UI Test">
         <classes>
-            <class name="com.metlife.test.LoginUITest">
+            <class name="test.com.metlife.springboot.LoginUITest">
                 <methods>
                     <include name="titleTest"/>
                     <include name="applicationDescriptionTest"/>

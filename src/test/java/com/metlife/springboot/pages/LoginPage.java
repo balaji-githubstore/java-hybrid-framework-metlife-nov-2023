@@ -1,8 +1,7 @@
-package com.metlife.pages;
+package com.metlife.springboot.pages;
 
-import com.metlife.base.WebDriverKeywords;
+import com.metlife.springboot.base.WebDriverKeywords;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class LoginPage extends WebDriverKeywords {
     private By usernameLocator=By.id("authUser");
@@ -11,11 +10,11 @@ public class LoginPage extends WebDriverKeywords {
     private By errorLocator=By.xpath("//p[contains(text(),'Invalid')]");
     //private WebDriver driver;
 
-    public LoginPage(WebDriver driver) {
-
-        super(driver);
-       // this.driver = driver;
-    }
+//    public LoginPage(WebDriver driver) {
+//
+//        super(driver);
+//       // this.driver = driver;
+//    }
 
     public void enterUsername(String username) {
         //driver.findElement(usernameLocator).sendKeys(username);

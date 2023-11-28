@@ -9,16 +9,16 @@
       </run>
     </groups>
     <classes>
-      <class name="com.metlife.test.LoginUITest">
+      <class name="test.com.metlife.springboot.LoginUITest">
         <methods>
           <include name="titleTest"/>
         </methods>
-      </class> <!-- com.metlife.test.LoginUITest -->
-      <class name="com.metlife.test.LoginTest">
+      </class> <!-- test.com.metlife.springboot.LoginUITest -->
+      <class name="test.com.metlife.springboot.LoginTest">
         <methods>
           <include name="validLoginTest" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- com.metlife.test.LoginTest -->
+      </class> <!-- test.com.metlife.springboot.LoginTest -->
     </classes>
   </test> <!-- Edge UI Test(failed) -->
 </suite> <!-- Failed suite [OpenEMR Suite] -->

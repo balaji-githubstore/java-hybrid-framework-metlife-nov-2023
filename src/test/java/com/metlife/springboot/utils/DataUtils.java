@@ -1,4 +1,4 @@
-package com.metlife.utils;
+package com.metlife.springboot.utils;
 
 import org.testng.annotations.DataProvider;
 
